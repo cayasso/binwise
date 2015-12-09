@@ -1,0 +1,29 @@
+{
+  "name": "binwise",
+  "version": "0.1.0",
+  "description": "BinWise API wrapper.",
+  "main": "./node/index",
+  "scripts": {
+    "test": "make test",
+    "prepublish": "make"
+  },
+  "main": "./node/index",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cayasso/binwise.git"
+  },
+  "author": "Jonathan Brumley <cayasso@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "lodash": "^3.10.0",
+    "superagent": "^1.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "nock": "^2.7.0",
+    "pre-commit": "^1.0.10",
+    "should": "^7.0.2",
+    "babel": "^5.8.29"
+  }
+}
