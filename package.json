@@ -34,7 +34,6 @@
     ]
   },
   "pre-commit": [
-    "prepublish",
     "test"
   ]
 }
