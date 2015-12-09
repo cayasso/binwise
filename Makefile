@@ -17,4 +17,4 @@ test:
 		--recursive \
 		test
 
-.PHONY: all clean node
+.PHONY: all clean node test
