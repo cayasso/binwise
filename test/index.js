@@ -1,10 +1,11 @@
 'use strict';
 
-var url = require('url');
-var nock = require('nock');
-var should = require('should');
-var BinWise = require('../lib/index');
-var APP_ID = 'abc123';
+import url from 'url';
+import nock from 'nock';
+import should from 'should';
+import BinWise from '../lib/index';
+
+const APP_ID = 'abc123';
 
 describe('BinWise', function () {
 
@@ -13,7 +14,7 @@ describe('BinWise', function () {
   });
 
   it('should throw error if application id is missing', function () {
-    (function(){
+    (() => {
      new BinWise(null);
     }).should.throw(/pass your BinWise Application ID/);
   });
@@ -23,7 +24,7 @@ describe('BinWise', function () {
   });
 
   it('should allow passing options', function () {
-    var binwise = new BinWise('abc', { 
+    let binwise = new BinWise('abc', { 
       host: 'https://test.com'
     });
     binwise.host.should.be.eql('https://test.com');
@@ -31,9 +32,9 @@ describe('BinWise', function () {
 
   describe('#getRestaurants', function () {
 
-    var binwise = null;
-    var query = null;
-    var body = null;
+    let binwise = null;
+    let query = null;
+    let body = null;
 
     beforeEach(function () {
 
@@ -57,7 +58,7 @@ describe('BinWise', function () {
     });
 
     it('should get restaurants endpoint with options', function (done) {
-      var obj = { page_size: 200 }; 
+      let obj = { page_size: 200 }; 
       binwise.getRestaurants(obj, function (err) {
         if (err) return done(err);
         query.should.have.properties({ app_id: APP_ID, page_size: '200' });
@@ -69,9 +70,9 @@ describe('BinWise', function () {
 
   describe('#getPublishedLists', function () {
 
-    var binwise = null;
-    var query = null;
-    var body = null;
+    let binwise = null;
+    let query = null;
+    let body = null;
 
     beforeEach(function () {
 
@@ -105,9 +106,9 @@ describe('BinWise', function () {
 
   describe('#getWineList', function () {
 
-    var binwise = null;
-    var query = null;
-    var body = null;
+    let binwise = null;
+    let query = null;
+    let body = null;
 
     beforeEach(function () {
 
