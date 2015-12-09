@@ -1,6 +1,6 @@
 {
   "name": "binwise",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "BinWise API wrapper.",
   "main": "./node/index",
   "scripts": {
