@@ -1,13 +1,12 @@
 {
   "name": "binwise",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "BinWise API wrapper.",
   "main": "./node/index",
   "scripts": {
     "test": "make test",
     "prepublish": "make"
   },
-  "main": "./node/index",
   "repository": {
     "type": "git",
     "url": "git://github.com/cayasso/binwise.git"
@@ -26,5 +25,7 @@
     "should": "^8.0.0",
     "babel": "^6.3.13"
   },
-  "pre-commit": ["test"]
+  "pre-commit": [
+    "test"
+  ]
 }
